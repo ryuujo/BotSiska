@@ -1,6 +1,6 @@
 {
-  "name": "siska-bot",
-  "version": "2.10.0",
+  "name": "bot-siska",
+  "version": "2.10.0-FORKED",
   "description": "Search, read, and download doujin book directly from your discord channel",
   "main": "app.js",
   "scripts": {
