@@ -17,10 +17,8 @@ module.exports = async (client) => {
     let guildFormat = client.util.nFormatter(client.guilds.cache.size);
 
     let status = [
-      `with ${userFormat} users`,
       `Bot v${version}`,
       `in ${guildFormat} server 🎉`,
-      "Help me to buy a VPS, please | nh donate",
       "Ara ara ara",
       "now with downloader | nh dl 177013",
     ];
