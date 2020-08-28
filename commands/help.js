@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require('discord.js');
 
 exports.run = async (client, msg, args, color) => {
   const app = await client.fetchApplication();
@@ -6,24 +6,24 @@ exports.run = async (client, msg, args, color) => {
   if (!args[0]) {
     const embed = new MessageEmbed()
       .setColor(color)
-      .setTitle("Nana helps")
+      .setTitle('BotSISKA helps')
       .setDescription(
-        `Nana help you to directly read doujinshi on nHentai from your Discord channel, you can invite me with [This Link](https://nana.masami.xyz/invite) or [Join my Server](https://nana.masami.xyz/server) (my Owner need suggestion for next update!)`
+        `Siska help you to directly read doujinshi on nHentai from your Discord channel.`
       )
       .addField(
-        "Command list",
-        `- nh random -- Get random doujinshi
-- nh read \`<ID>\` -- Read doujinshi by the Id you provided
-- nh lang \`<english/japanese/chinese>\` -- Get random doujinshi by the language you provided. You can use alias language too.\nExample: \`<ch/en/jp>\`
-- nh download \`<Book ID>\` -- Download doujin in zip file
-- nh parody \`<Parody> [Language]\` -- Get random doujinshi by parody you provided
-- nh tag \`<Tag> [Language]\` -- Get random doujinshi by tag you provided
-- nh search \`<Query> [Language]\` -- Search nHentai site`
+        'Command list',
+        `- !!nh random -- Get random doujinshi
+- !!nh read \`<ID>\` -- Read doujinshi by the Id you provided
+- !!nh lang \`<english/japanese/chinese>\` -- Get random doujinshi by the language you provided. You can use alias language too.\nExample: \`<ch/en/jp>\`
+- !!nh download \`<Book ID>\` -- Download doujin in zip file
+- !!nh parody \`<Parody> [Language]\` -- Get random doujinshi by parody you provided
+- !!nh tag \`<Tag> [Language]\` -- Get random doujinshi by tag you provided
+- !!nh search \`<Query> [Language]\` -- Search nHentai site
+
+Use \`" "\` to type 2 or more query words`
       )
-      .setFooter(`Nana V${client.version} || <> = required, [] = optional`)
-      .addField(
-        "Changelogs",
-        `- **BANNED** some tag, so you can't read it again from me again`
+      .setFooter(
+        `Nana V${client.version} || <> = required, [] = optional`
       )
       .setTimestamp();
     msg.channel.send(embed);
@@ -48,7 +48,7 @@ exports.run = async (client, msg, args, color) => {
 
       let embed = new MessageEmbed()
         .setAuthor(
-          client.user.username + " Help Description",
+          client.user.username + ' Help Description',
           client.user.displayAvatarURL
         )
         .setTitle(
@@ -61,7 +61,7 @@ exports.run = async (client, msg, args, color) => {
         .setDescription(desc)
         .setColor(color)
         .addField(
-          "Usage",
+          'Usage',
           usages[0]
             ? `${client.config.PREFIX} ${usages.join(
                 `\n${client.config.PREFIX} `
@@ -82,11 +82,11 @@ exports.run = async (client, msg, args, color) => {
 };
 
 exports.conf = {
-  aliases: []
+  aliases: [],
 };
 
 exports.help = {
-  name: "help",
-  description: "Display bot command list",
-  usage: "help"
+  name: 'help',
+  description: 'Display bot command list',
+  usage: 'help',
 };
