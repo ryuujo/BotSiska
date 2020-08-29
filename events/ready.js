@@ -1,5 +1,5 @@
-const pkg = require("../package.json");
-const axios = require("axios");
+const pkg = require('../package.json');
+const axios = require('axios');
 
 module.exports = async (client) => {
   const version = pkg.version;
@@ -16,14 +16,9 @@ module.exports = async (client) => {
     let userFormat = client.util.nFormatter(users);
     let guildFormat = client.util.nFormatter(client.guilds.cache.size);
 
-    let status = [
-      `Bot v${version}`,
-      `in ${guildFormat} server 🎉`,
-      "Ara ara ara",
-      "now with downloader | nh dl 177013",
-    ];
+    let status = [`Bot v${version}`, 'Ara ara ara'];
     let rand = client.util.getRandInt(status.length);
 
-    client.user.setActivity(status[rand], { type: "PLAYING" });
+    client.user.setActivity(status[rand], { type: 'PLAYING' });
   }, 6e4);
 };
